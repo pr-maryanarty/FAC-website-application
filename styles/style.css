@@ -1,17 +1,15 @@
 :root {
     --bg: #569688;
-    --primary: #311996;
-    --white: #f8f0e4;
+    --primary: #a0ecc9;
+    --white: #163a32;
     --text: #f8f0e4;
-    --accent: #eef0a3;
+    --accent: #6e5494;
     --accent2: linear-gradient(0deg, #eef0a3 0%, #b0ebe1 100%);
     --hover: linear-gradient(0deg, #eef0a3 0%, #b0ebe1 100%);
-    --linkedin: #2867b2;
-    --linkedin-bg: rgba(40, 103, 178, 0.35);
+    --codewars: rgba(255, 255, 255, 0.65);
+    --codewars-bg: rgba(255, 255, 255, 0.15);
     --github: #6e5494;
     --github-bg: rgba(110, 84, 148, 0.35);
-    --codepen: rgba(255, 255, 255, 0.65);
-    --codepen-bg: rgba(255, 255, 255, 0.15);
     --max-width: 1440px;
     --content-width: 1238px;
 }
@@ -23,11 +21,11 @@
     --text: #311996;
     --accent: #e12179;
     --accent2: #311996;
-    --linkedin: #2867b2;
+    --hover: linear-gradient(0deg, #311996 0%, #e12179 100%);
     --github: #c9510c;
     --github-bg: rgba(201, 81, 12, 0.35);
-    --codepen: #12100b;
-    --codepen-bg: rgba(18, 16, 11, 0.35);
+    --codewars: #12100b;
+    --codewars-bg: rgba(18, 16, 11, 0.35);
 }
 
 * {
@@ -71,6 +69,7 @@ p {
 
 img {
     display: block;
+    width: 5vw;
 }
 
 button {
@@ -138,11 +137,11 @@ button {
     color: var(--text);
 }
 
-.btn--download path {
+/* .btn--download path {
     fill: var(--text);
-}
+} */
 
-.animate-download {
+/* .animate-download {
     animation: downloadMe 1s;
 }
 
@@ -153,7 +152,7 @@ button {
     to {
         transform: translateY(20px);
     }
-}
+} */
 
 .block-bg {
     padding: 64px 32px;
@@ -443,18 +442,6 @@ button {
     justify-content: center;
 }
 
-.github path {
-    fill: var(--github);
-}
-
-.linkedin path {
-    fill: var(--linkedin);
-}
-
-.codepen path {
-    fill: var(--codepen);
-}
-
 .about-me .contact-links__link {
     display: flex;
     justify-content: center;
@@ -474,14 +461,9 @@ button {
     border-color: var(--github-bg);
 }
 
-.about-me .linkedin .contact-links__link {
+.about-me .codewars .contact-links__link {
     border-radius: 50%;
-    border-color: var(--linkedin-bg);
-}
-
-.about-me .codepen .contact-links__link {
-    border-radius: 50%;
-    border-color: var(--codepen-bg);
+    border-color: var(--codewars-bg);
 }
 
 .about-me .about-me__description {
@@ -605,110 +587,6 @@ button {
     margin-bottom: 2rem;
 }
 
-.experience {
-    margin-bottom: 68px;
-}
-
-.experience__list {
-    display: flex;
-    flex-direction: column;
-    gap: 136px;
-}
-
-.experience__job {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto auto 1fr;
-    column-gap: 68px;
-    position: relative;
-}
-
-.experience__year {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-}
-
-.experience__company {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-}
-
-.experience__location {
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
-}
-
-.experience__title {
-    grid-column: 2 / 3;
-    grid: 1 / 2;
-}
-
-.experience__responsibilities {
-    grid-column: 2 / 3;
-    grid-row: 2 / 4;
-}
-
-.experience__job:not(:last-child)::before {
-    position: absolute;
-    content: "";
-    background-color: var(--text);
-    width: 100%;
-    height: 1px;
-    bottom: -68px;
-}
-
-.experience__year {
-    position: relative;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-}
-
-.experience__year::before {
-    position: absolute;
-    content: "";
-    width: 34px;
-    height: 10px;
-    background-color: var(--accent);
-    bottom: 18px;
-}
-
-.experience__company {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-}
-
-.experience__location {
-    font-family: "Poppins", sans-serif;
-}
-
-.experience__title {
-    margin-bottom: 34px;
-}
-
-.experience__responsibility {
-    line-height: 1.8;
-    position: relative;
-    padding-left: 25px;
-}
-
-.experience__responsibility:not(:last-child) {
-    margin-bottom: 1rem;
-}
-
-.experience__responsibility::before {
-    position: absolute;
-    content: "";
-    display: block;
-    background-image: url("../svg/list-icon.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 10px;
-    height: 17px;
-    top: 0;
-    left: 0;
-    transform: translateY(50%);
-}
-
 .facts__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -761,138 +639,12 @@ button {
     top: 0;
 }
 
-.education__list {
-    display: flex;
-    flex-direction: column;
-    row-gap: 68px;
-}
-
-.education__list a {
-    transition: color 0.3s ease-in-out;
-}
-
-.education__list a:hover {
-    color: var(--accent);
-    border-color: var(--accent);
-    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-ouT;
-}
-
-.education__item {
-    display: grid;
-    grid-template-columns: 1fr 1fr 3fr 2fr;
-    column-gap: 28px;
-    position: relative;
-}
-
-.education__item:not(:last-child)::before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 1px;
-    background-color: var(--text);
-    bottom: -34px;
-}
-
-.education a {
-    display: inline;
-    color: var(--text);
-    text-decoration: none;
-    border-bottom: 1px solid var(--text);
-    position: relative;
-    line-height: 1.2;
-}
-
-.education__year {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-}
-
-.education__title {
-    font-size: 24px;
-}
-
-pre {
-    width: 100%;
-    padding-left: 0;
-    white-space: normal;
-    display: flex;
-    justify-content: center;
-}
-
-pre code {
-    white-space: pre-wrap;
-}
-
-pre code.hljs {
-    background-color: var(--bg);
-    padding: 0;
-}
-
-.video__container {
-    max-width: 80%;
-    margin: 0 auto;
-}
-
-.video__player {
-    border: none;
-    max-width: 100%;
-    height: 350px;
-    border-radius: 10px;
-}
-
 .contact-me__title {
     margin-bottom: 1rem;
 }
 
 .contact-me__text {
     margin-bottom: 2rem;
-}
-
-.form {
-    margin: 0 auto;
-    width: 100%;
-}
-
-.form-wrapper {
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.required {
-    color: var(--white);
-}
-
-.form__group {
-    margin-bottom: 34px;
-}
-
-input,
-textarea {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: 2.75rem;
-    border: none;
-    border-bottom: 2px solid var(--white);
-    background-color: transparent;
-}
-
-textarea {
-    height: 5rem;
-    width: 100%;
-    max-width: 100%;
-    border: none;
-    border-bottom: 2px solid var(--white);
-}
-
-input:hover,
-textarea:hover {
-    border-bottom: 2px solid var(--white);
-}
-
-input:focus,
-textarea:focus {
-    border-bottom: 2px solid var(--white);
 }
 
 .page-footer {
@@ -906,12 +658,8 @@ textarea:focus {
 
 .page-footer__inner {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column-reverse;
     align-items: center;
-}
-
-.page-footer__copyright {
-    width: 100%;
 }
 
 .page-footer__contact-links {
@@ -968,43 +716,31 @@ textarea:focus {
         animation: float 2s ease-in-out infinite alternate;
     }
 
+    .about-me .contact-links__item.codewars {
+        top: calc(50% - 20rem);
+        right: 20rem;
+        animation-delay: 0.5s;
+    }
+
     .about-me .contact-links__item.github {
         top: calc(50% - 20rem);
         right: 20rem;
         animation-delay: 0.5s;
     }
 
-    .about-me .contact-links__item.linkedin {
-        top: calc(50% - 8rem);
-        left: 14rem;
-    }
-
-    .about-me .contact-links__item.codepen {
-        top: calc(50% - 4rem);
-        right: 10rem;
-        animation-direction: alternate-reverse;
-    }
-
     .about-me .contact-links__link {
         border-width: 20px;
         transition: border 0.3s ease-in-out;
     }
+    /* .about-me .codewars .contact-links__link {
+        border-radius: 50%;
+        border-color: var(--codewars-bg);
+        transform: translateX(-50%) translateY(-50%);
+    } */
 
     .about-me .github .contact-links__link {
         border-radius: 50%;
         border-color: var(--github-bg);
-        transform: translateX(50%) translateY(-50%);
-    }
-
-    .about-me .linkedin .contact-links__link {
-        border-radius: 50%;
-        border-color: var(--linkedin-bg);
-        transform: translateX(-50%) translateY(-50%);
-    }
-
-    .about-me .codepen .contact-links__link {
-        border-radius: 50%;
-        border-color: var(--codepen-bg);
         transform: translateX(50%) translateY(-50%);
     }
 
@@ -1051,6 +787,10 @@ textarea:focus {
 
     .page-header-nav .site-navigation__item:nth-child(1) {
         transition-delay: 0.1s;
+    }
+    .logo {
+        width: 15px;
+        height: 15px;
     }
 
     .page-header-nav .site-navigation__item:nth-child(2) {
@@ -1231,29 +971,6 @@ textarea:focus {
         font-size: 24px;
     }
 
-    .experience__list {
-        gap: 64px;
-    }
-
-    .experience__job:not(:last-child)::before {
-        bottom: -32px;
-    }
-
-    .experience__title {
-        font-size: 24px;
-        margin-bottom: 16px;
-    }
-
-    .experience__year::before {
-        bottom: 5px;
-    }
-
-    .experience__company,
-    .experience__location,
-    .experience__responsibilities {
-        font-size: 16px;
-    }
-
     .facts__quantity {
         font-size: 56px;
     }
@@ -1265,32 +982,11 @@ textarea:focus {
     .languages__title {
         font-size: 22px;
     }
-
-    .education__item {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .education__title {
-        font-size: 24px;
-    }
-
-    .education__degree {
-        font-size: 20px;
-    }
-
-    .code-examples {
-        font-size: 18px;
-    }
 }
 
 @media (max-width: 700px) {
     .about-me__job {
         font-size: 50px;
-    }
-
-    .experience__job {
-        column-gap: 34px;
     }
 
     .facts__list {
@@ -1308,14 +1004,6 @@ textarea:focus {
 
     .languages__list {
         column-gap: 0;
-    }
-
-    pre code {
-        font-size: 16px;
-    }
-
-    .video__player {
-        height: 300px;
     }
 }
 
@@ -1355,6 +1043,7 @@ textarea:focus {
     .page-footer__inner {
         display: flex;
         flex-direction: column;
+
         text-align: center;
         gap: 12px;
     }
@@ -1419,14 +1108,6 @@ textarea:focus {
     .facts__quantity {
         font-size: 48px;
         line-height: 1;
-    }
-
-    .code-examples {
-        font-size: 16px;
-    }
-
-    .video__player {
-        height: 250px;
     }
 
     .form {
