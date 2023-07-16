@@ -2,8 +2,6 @@ const scrollToTopButton = document.getElementById("scrollToTop");
 const burgerButton = document.querySelector(".page-header__burger");
 const menu = document.querySelector(".page-header-nav");
 const siteNav = document.querySelector(".site-navigation");
-const downloadButton = document.querySelector(".btn--download");
-const downloadIcon = downloadButton.querySelector(".download-arrow");
 
 const handleScroll = () => {
     if (
@@ -37,14 +35,6 @@ function closeNav() {
     menu.classList.remove("active");
 }
 
-function animateDownloadButton() {
-    downloadIcon.classList.add("animate-download");
-
-    setTimeout(function () {
-        downloadIcon.classList.remove("animate-download");
-    }, 1000);
-}
-
 document.addEventListener("scroll", handleScroll);
 scrollToTopButton.addEventListener("click", function (e) {
     e.preventDefault();
@@ -53,4 +43,3 @@ scrollToTopButton.addEventListener("click", function (e) {
 
 burgerButton.addEventListener("click", toggleMobileNav);
 siteNav.addEventListener("click", closeNav);
-downloadButton.addEventListener("click", animateDownloadButton);
