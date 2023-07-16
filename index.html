@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>mariana's application</title>
+        <link rel="icon" href="#" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Ubuntu&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="./styles/style.css" />
+    </head>
+    <body id="body">
+        <div class="wrapper">
+            <header class="page-header">
+                <div class="page-header__inner">
+                    <button
+                        class="theme-toggle"
+                        id="toggle"
+                        aria-label="Activate light mode"
+                        title="Activate light mode"
+                        type="button"
+                    >
+                        <svg
+                            id="svg1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="25"
+                            height="25"
+                            viewBox="0 0 25 25"
+                        >
+                            <mask id="moonClip">
+                                <rect
+                                    x="0"
+                                    y="0"
+                                    width="25"
+                                    height="25"
+                                    fill="white"
+                                />
+                                <circle
+                                    cx="23"
+                                    cy="12.5"
+                                    r="13.5"
+                                    fill="black"
+                                />
+                            </mask>
+                            <circle
+                                id="moon"
+                                cx="12.5"
+                                cy="12.5"
+                                r="12.5"
+                                fill="#F8F0E4"
+                                mask="url(#moonClip)"
+                            />
+                            <g fill-rule="evenodd">
+                                <circle
+                                    id="sun"
+                                    cx="12.5"
+                                    cy="12.5"
+                                    r="7"
+                                    fill="#E12179"
+                                />
+                                <circle
+                                    id="beam1"
+                                    cx="12.5"
+                                    cy="23"
+                                    r="2"
+                                    fill="#E12179"
+                                />
+                                <circle
+                                    id="beam2"
+                                    cx="3.5"
+                                    cy="18"
+                                    r="2"
+                                    fill="#E12179"
+                                />
+                                <circle
+                                    id="beam3"
+                                    cx="3.5"
+                                    cy="7"
+                                    r="2"
+                                    fill="#E12179"
+                                />
+                                <circle
+                                    id="beam4"
+                                    cx="12.5"
+                                    cy="2"
+                                    r="2"
+                                    fill="#E12179"
+                                />
+                                <circle
+                                    id="beam5"
+                                    cx="22.5"
+                                    cy="7"
+                                    r="2"
+                                    fill="#E12179"
+                                />
+                                <circle
+                                    id="beam6"
+                                    cx="21.5"
+                                    cy="18"
+                                    r="2"
+                                    fill="#E12179"
+                                />
+                            </g>
+                        </svg>
+                    </button>
+                    <div class="page-header__burger" title="Open menu">
+                        <span></span>
+                    </div>
+                    <nav class="page-header-nav">
+                        <ul class="site-navigation">
+                            <li class="site-navigation__item">
+                                <a
+                                    class="site-navigation__link"
+                                    href="#skills"
+                                    aria-label="Go to skills section"
+                                    >Why coding?</a
+                                >
+                            </li>
+                            <li class="site-navigation__item">
+                                <a
+                                    class="site-navigation__link"
+                                    href="#projects"
+                                    aria-label="Go to projects section"
+                                    >Projects</a
+                                >
+                            </li>
+
+                            <li class="site-navigation__item">
+                                <a
+                                    class="site-navigation__link"
+                                    href="#lang"
+                                    aria-label="Go to languages section"
+                                    >Languages</a
+                                >
+                            </li>
+
+                            <li class="site-navigation__item">
+                                <a
+                                    class="site-navigation__link"
+                                    href="#contact"
+                                    aria-label="Go to contacts"
+                                    >Contact</a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <main>
+                <h1 class="visually-hidden">
+                    Mariana Dementeva - application website for FAC
+                </h1>
+                <div class="main-wrapper">
+                    <section class="about-me container">
+                        <div class="about-me__img-container">
+                            <img
+                                class="about-me__img"
+                                src="./styles/src/cv_photo.jpeg"
+                                alt="Personal photo"
+                            />
+                        </div>
+                        <h2>
+                            Hi, I&#39;m
+                            <span class="text-highlighted">Mariana</span> :)
+                        </h2>
+                        <h2 id="contact" class="title about-me__job">
+                            welcome to my application website for FAC
+                        </h2>
+                        <div class="about-me__buttons-wrapper">
+                            <a
+                                class="btn btn--base"
+                                href="mailto:mariana.dementeva@gmail.com"
+                            >
+                                <span>Email me</span>
+                            </a>
+                            <a
+                                class="btn btn--download"
+                                href="./styles/src/pdf/CV_Mariana Dementeva.pdf"
+                                title=""
+                                target="_blank"
+                                download
+                                ><span>Download CV</span>
+                            </a>
+                        </div>
+                        <ul class="contact-links">
+                            <li class="contact-links__item github">
+                                <a
+                                    href="https://github.com/pr-maryanarty"
+                                    class="contact-links__link"
+                                    target="_blank"
+                                    ><img
+                                        src="styles/src/logo/github-mark.png"
+                                    />
+                                </a>
+                            </li>
+
+                            <li class="contact-links__item codewars">
+                                <a
+                                    href="https://codewars/users/pr-maryanarty"
+                                    class="contact-links__link"
+                                    target="_blank"
+                                >
+                                    <img
+                                        src="styles/src/logo/4691329_codewars_icon.png"
+                                    />
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="about-me__description">
+                            <p class="description__item">
+                                👋 my name is Mariana Dementeva, I’m 31yo. I was
+                                born in St-Petersburg, Russia. Since the war in
+                                Ukraine broke out I fled Russia and landed in
+                                London together with my husband. Ever since I am
+                                trying to find
+                                <span class="text-highlighted"
+                                    >my place under the sun</span
+                                >.
+                            </p>
+                            <p class="description__item">
+                                For the past 8 years I have been working as an
+                                English as a Second language teacher, mostly
+                                teaching adults online. Teaching is a really
+                                cool occupation, but I guess currently I am at
+                                this point in my life when goals and aspirations
+                                shift. I really enjoy breaking down difficult
+                                concepts and trying to tackle problems from
+                                different angles.
+                            </p>
+                            <p class="description__item">
+                                I have set up English speaking clubs for
+                                non-native speakers in an effort to bring more
+                                like-minded people together, so
+                                <span class="text-highlighted"
+                                    >the sense of community is very inportant
+                                    for me</span
+                                >, that's why I feel so at home at FAC.
+                            </p>
+                            <p class="description__item">
+                                I’m an avid traveler and I have been to a
+                                country that doesn't exist! That's a clickbait
+                                for course, I was talking about Transnistria. I
+                                think traveling actually makes me a great
+                                <span class="text-highlighted"
+                                    >problem solver</span
+                                >, I’m quick on my feet, and always ready to
+                                tackle any issues.
+                            </p>
+                            <p class="description__item">
+                                I have recently taken up crocheting, and as in
+                                all new beginnings you are both making great
+                                progress and feel hopeless the following minute.
+                                I like getting through tough moments with
+                                crocheting, it's calming and satisfying
+                                experience. Adn the through-line of my story -
+                                it gives you instant results, where you can draw
+                                "feedback".
+                            </p>
+                        </div>
+                    </section>
+                    <section class="skills block-bg">
+                        <p>
+                            This is my 2 attempt to get into FAC. This time
+                            around I focused on more general usage of JS, thanks
+                            to Codewars. Honestly, I thought that after movie
+                            data from previous application process - nothing can
+                            scare me, was I wrong. Codewars helped apply
+                            analytical thinking when it comes to solving
+                            problems. I learned how to break down prolems and
+                            refactor the code. My goal is to try to make more
+                            "one-liners" in my answers.
+                        </p>
+                        <h2 id="skills" class="title"></h2>
+                        <p class="subtitle">What I learned</p>
+                        <ul class="skills__list">
+                            <li class="skills__item">
+                                JavaScript: DOM manipulation, functions,
+                                event-listeners and conditional operator
+                            </li>
+                            <li class="skills__item">CodeWars 6 kyu</li>
+                            <li class="skills__item">HTML: Semantic HTML5</li>
+                            <li class="skills__item">
+                                CSS: Flex-box and CSS-Grid,pseudo selectors
+                            </li>
+                            <li class="skills__item">Git</li>
+                            <li class="skills__item">Figma / Photoshop</li>
+                        </ul>
+                    </section>
+
+                    <section class="skills block-bg">
+                        <p class="subtitle">Why coding?</p>
+                        <p>
+                            I’m a proponent of lifelong education, so within
+                            these years, I was trying so many different things.
+                            I am a former cheerleader, sport is my passion, now
+                            though I’m more interested in yoga and pilates -
+                            things that can also help our mind. I tried learning
+                            illustrations, design and project management, but
+                            <span class="text-highlighted"
+                                >nothing quite hit me as coding</span
+                            >. Coding is both: instant gratification, namely:
+                            you see whether something worked out or not and at
+                            the same time contemplation and deep concentration,
+                            which takes a lot of brain power and drains you
+                            completely, but isn’t that how we know we’ve
+                            accomplished something? I strive for fulfillment and
+                            self-accomplishment, I believe that coding might
+                            help me do it. Web development is massive uncharted
+                            territory where you still are able to achieve great
+                            heights. And I have a deep desire to apply myself,
+                            to standout from the crowd.
+                        </p>
+                        <br />
+                        <p>
+                            I always knew that work is a great way to express
+                            oneself, and I have always been conscientious and
+                            hard-working, no matter how miniscule the task was.
+                            I am very thankful that right now the world is
+                            changing and more women have more equal chances to
+                            become great specialists, that empowers me to go on.
+                            I do believe I’m capable of overcoming new
+                            challenges. Changing career in a new country after
+                            you are 30 sounds like an interesting challenge, I’m
+                            willing to rise to.
+                        </p>
+                    </section>
+                    <section class="projects container">
+                        <p class="subtitle">What I do</p>
+                        <h2 id="projects" class="title">Recent projects</h2>
+                        <div class="projects__wrapper">
+                            <article class="projects__item">
+                                <a
+                                    class="projects__link"
+                                    href="https://pr-maryanarty.github.io/FAC-whack-a-mole-game/"
+                                    target="_blank"
+                                >
+                                    <img
+                                        class="projects__img"
+                                        src="./styles/src/whack-a-mole.gif"
+                                        alt="Whack a mole"
+                                    />
+                                    <div class="projects__content">
+                                        <p class="subtitle projects__subtitle">
+                                            JavaScript, DOM manupulation,
+                                            randomizer, Flex Box
+                                        </p>
+                                        <h3 class="title projects__title">
+                                            Classic game "Whack a mole"
+                                        </h3>
+                                        <p class="projects__desc">
+                                            A game 3*3 grid, you hit a mole and
+                                            gain points, avoid hitting the
+                                            skeleton. Mole andd skeleton spawn
+                                            from the burrows randomly, the
+                                            better you score the faster
+                                            characters get. Game includes
+                                            sounds, they were implemented
+                                            without API, so when you get to the
+                                            second or third level - the sound
+                                            can't keep up.
+                                        </p>
+                                        <div class="btn btn--base btn--link">
+                                            <span>See project</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="projects__item">
+                                <a
+                                    class="projects__link"
+                                    href="https://pr-maryanarty.github.io/FAC-movie-data-project//"
+                                    target="_blank"
+                                >
+                                    <img
+                                        class="projects__img"
+                                        src="./styles/src/movie-project-gif.gif"
+                                        alt="Movie Data project"
+                                    />
+                                    <div class="projects__content">
+                                        <p class="subtitle projects__subtitle">
+                                            JS, HTML, CSS
+                                        </p>
+                                        <h3 class="title projects__title">
+                                            Movie Data - JS, DOM, sorting,
+                                            append, interacting
+                                        </h3>
+                                        <p class="projects__desc">
+                                            The project from previous FAC cohort
+                                            application. The basic structure of
+                                            a task is rendering movies onto the
+                                            page (using essentially no html),
+                                            interacting with a page by adding a
+                                            new movie and builting “sorting”
+                                            feature as well, which would
+                                            reorganize the page without
+                                            reloading.
+                                        </p>
+                                        <div class="btn btn--base btn--link">
+                                            <span>See project</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="projects__item">
+                                <a
+                                    class="projects__link"
+                                    href="https://funny-treacle-2dc656.netlify.app/"
+                                    target="_blank"
+                                >
+                                    <img
+                                        class="projects__img"
+                                        src="./styles/src/weatherapp.gif"
+                                        alt="the weather app"
+                                    />
+                                    <div class="projects__content">
+                                        <p class="subtitle projects__subtitle">
+                                            HTML, CSS, Bootstrap, JS, API
+                                        </p>
+                                        <h3 class="title projects__title">
+                                            An app lets you check the weather in
+                                            any city
+                                        </h3>
+                                        <p class="projects__desc">
+                                            You can enter any city, and it will
+                                            show you the current weather, as
+                                            well as a forecast for the nearest
+                                            future. This app is using API.
+                                        </p>
+                                        <div class="btn btn--base btn--link">
+                                            <span>See project</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="projects__item">
+                                <a
+                                    class="projects__link"
+                                    href="https://pr-maryanarty.github.io/FAC-game/"
+                                    target="_blank"
+                                >
+                                    <img
+                                        class="projects__img"
+                                        src="./styles/src/game-prokect-gif.gif"
+                                        alt="Rock,Paper, Scissors"
+                                    />
+                                    <div class="projects__content">
+                                        <p class="subtitle projects__subtitle">
+                                            HTML, CSS, JS
+                                        </p>
+                                        <h3 class="title projects__title">
+                                            Try your luck with a computer,
+                                            playing rock, paper, scissors
+                                        </h3>
+                                        <p class="projects__desc">
+                                            You play against the computer. See
+                                            who scores more. Randomizer was
+                                            implemented, as well as loops to
+                                            keep score.
+                                        </p>
+                                        <div class="btn btn--base btn--link">
+                                            <span>See project</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="projects__item">
+                                <a
+                                    class="projects__link"
+                                    href="https://pr-maryanarty.github.io/FAC-website/"
+                                    target="_blank"
+                                >
+                                    <img
+                                        class="projects__img"
+                                        src="./styles/src/website.gif"
+                                        alt="website"
+                                    />
+                                    <div class="projects__content">
+                                        <p class="subtitle projects__subtitle">
+                                            HTML, CSS, JS
+                                        </p>
+                                        <h3 class="title projects__title">
+                                            Website application, version 1.0
+                                        </h3>
+                                        <p class="projects__desc">
+                                            You can check out my previous FAC
+                                            application website, following a few
+                                            more projects, which I applied with
+                                            previously.
+                                        </p>
+                                        <div class="btn btn--base btn--link">
+                                            <span>See project</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="facts block-bg">
+                        <p class="subtitle">Some facts about me</p>
+                        <h2 class="title">Random numbers</h2>
+                        <dl class="facts__list">
+                            <dt class="facts__quantity">50</dt>
+                            <dd class="facts__desc">
+                                katas and counting on&nbsp;Codewars
+                            </dd>
+                            <dt class="facts__quantity">120</dt>
+                            <dd class="facts__desc">
+                                YouTube video tutorials watched
+                            </dd>
+                            <dt class="facts__quantity">4</dt>
+                            <dd class="facts__desc">languages I can speak</dd>
+                            <dt class="facts__quantity">>2K</dt>
+                            <dd class="facts__desc">
+                                funny memes on my meme page
+                            </dd>
+                        </dl>
+                    </section>
+
+                    <section class="languages container">
+                        <p class="subtitle">I can speak</p>
+                        <h2 id="lang" class="title">Languages</h2>
+                        <dl class="languages__list">
+                            <dt class="languages__title">English 🇺🇸</dt>
+                            <dd class="languages__level">Advanced</dd>
+                            <dt class="languages__title">Russian</dt>
+                            <dd class="languages__level">Native</dd>
+                            <dt class="languages__title">Spanish 🇲🇽</dt>
+                            <dd class="languages__level">Pre-intermediate</dd>
+                            <dt class="languages__title">Ukranian 🇺🇦</dt>
+                            <dd class="languages__level">Pre-intemediate</dd>
+                        </dl>
+                    </section>
+                </div>
+            </main>
+            <button
+                id="scrollToTop"
+                class="btn btn--to-top"
+                title="Go to top"
+                type="button"
+            >
+                Top
+            </button>
+            <footer class="page-footer">
+                <div class="page-footer__inner">
+                    <div class="page-footer__copyright">
+                        <p>2023 by Mariana Dementeva</p>
+                    </div>
+                    <ul class="page-footer__contact-links">
+                        <li class="contact-links__item">
+                            <a
+                                href="https://github.com/pr-maryanarty"
+                                class="contact-links__link"
+                                target="_blank"
+                                >Github</a
+                            >
+                        </li>
+                        <li class="contact-links__item">
+                            <a
+                                href="https://www.codewars.com/users/pr-maryanarty"
+                                class="contact-links__link"
+                                target="_blank"
+                                >Codewars</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+        <script src="app.js"></script>
+        <script src="toggle.js"></script>
+    </body>
+</html>
